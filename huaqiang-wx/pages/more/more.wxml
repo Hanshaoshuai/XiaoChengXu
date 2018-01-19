@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  	<view  bindtap="bindViewTap" class="userinfo">
+  	
+  		<!--数据绑定-->
+    	<text class="userinfo-nickname">{{logs}}</text>
+    	
+    	<!--事件绑定-->
+    	<button bindtap="clickText"> Change normal data </button>
+    	
+    	<!--页面跳转-->
+    	<button bindtap="tiaoZhuan"> 跳转到新页面 </button>
+    	<navigator url="../moban/moban">跳转到新页面</navigator>
+		<navigator url="../moban/moban" open-type="redirect">在当前页打开</navigator>
+		<navigator url="../moban/moban" open-type="switchTab">切换到首页Tab</navigator>
+		
+		<!--发起支付-->
+    	<button bindtap="zhifu"> 发起支付 </button>
+  	</view>
+  	<view class="usermotto">
+    	<text class="user-motto">motto</text>
+  	</view>
+  	
+  	<!--列表渲染-->
+  	<view wx:for="{{array}}"> {{item}} </view>
+  	
+  	<!--条件渲染-->
+  	<view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+	<view wx:elif="{{view == 'APP'}}"> APP </view>
+	<view wx:else="{{view == 'MINA'}}"> MINA </view>
+	
+	<!--模板-->
+	<template name="staffName">
+	  <view>
+	    FirstName: {{firstName}}, LastName: {{lastName}}
+	  </view>
+	</template>
+	<template is="staffName" data="{{...staffA}}"></template>
+	<template is="staffName" data="{{...staffB}}"></template>
+	<template is="staffName" data="{{...staffC}}"></template>
+</view>

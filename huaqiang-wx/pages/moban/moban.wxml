@@ -1,0 +1,5 @@
+<!--pages/userinfo/user.wxml-->
+<template name="item">
+  <text>{{text}}</text>
+</template>
+<view> {{text}} </view>

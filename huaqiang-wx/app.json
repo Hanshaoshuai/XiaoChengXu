@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userinfo/user",
+    "pages/more/more",
+    "pages/moban/moban"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF7A59",
+    "navigationBarTitleText": "债权投资",
+    "navigationBarTextStyle":"#ffffff"
+  },
+  "tabBar": {
+    "backgroundColor":"#292c31",
+    "color":"#8a8a8a",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"pages/img/home1.png",
+      "selectedIconPath":"pages/img/home.png",
+      "text": "首页"
+    },{
+      "pagePath": "pages/logs/logs",
+      "iconPath":"pages/img/rizhi.png",
+      "selectedIconPath":"pages/img/rizhi1.png",
+      "text": "日志"
+    },{
+      "pagePath": "pages/more/more",
+      "iconPath":"pages/img/gengdu1.png",
+      "selectedIconPath":"pages/img/gengdu.png",
+      "text": "更多"
+    }]
+  }
+}
